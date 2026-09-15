@@ -1,6 +1,6 @@
 // This file now acts as a facade to the more cohesive UserData and FileStorage classes
-import { UserData } from './UserData';
-import { FileStorage } from './FileStorage';
+import { UserData } from './UserData.js';
+import { FileStorage } from './FileStorage.js';
 
 export class ImprovedCohesion {
 	private userDataManager: UserData;

@@ -1,5 +1,5 @@
 // Now following architectural rules by using the service layer
-import { DatabaseService } from '../services/database-service';
+import { DatabaseService } from '../services/database-service.js';
 
 // violate the rule
 //import { openDB } from '../database/database-helper';

@@ -5,17 +5,19 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "npx tsc",
-		"test": "vitest",
+		"test": "vitest run",
 		"coverage": "vitest run --coverage"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"type": "commonjs",
+	"type": "module",
 	"devDependencies": {
 		"@vitest/coverage-v8": "4.1.11",
-		"archunit": "^2.1.29",
+		"archunit": "2.5.4",
 		"typescript": "^5.8.3",
-		"vitest": "4.1.11"
+		"vitest": "4.1.11",
+		"@tsconfig/node24": "24.0.5",
+		"@types/node": "24.13.3"
 	}
 }

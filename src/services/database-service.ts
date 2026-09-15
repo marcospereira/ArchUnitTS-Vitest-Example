@@ -1,4 +1,4 @@
-import { openDB } from '../database/database-helper';
+import { openDB } from '../database/database-helper.js';
 
 export class DatabaseService {
 	private static instance: DatabaseService;

@@ -1,5 +1,5 @@
 // This is fine
-import { addRevenue } from '../database/database-helper';
+import { addRevenue } from '../database/database-helper.js';
 
 const startingMoney = 1;
 const maxMoney = 10000;

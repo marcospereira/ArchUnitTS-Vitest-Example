@@ -4,7 +4,7 @@ import { describe, it, expect } from 'vitest';
 describe('architecture', () => {
 	it('lcom should be below 0.5 in business', async () => {
 		const rule = metrics()
-			.inFolder('business')
+			.inFolder('src/business')
 			.lcom()
 			.lcom96b()
 			.shouldBeBelowOrEqual(0.5);
@@ -12,7 +12,7 @@ describe('architecture', () => {
 	});
 
 	it('lcom should be below 0.5 ui', async () => {
-		const rule = metrics().inFolder('ui').lcom().lcom96b().shouldBeBelow(0.5);
+		const rule = metrics().inFolder('src/ui').lcom().lcom96b().shouldBeBelow(0.5);
 		await expect(rule).toPassAsync();
 	});
 

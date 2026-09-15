@@ -1,13 +1,30 @@
 {
+	"extends": ["@tsconfig/node24/tsconfig.json"],
 	"compilerOptions": {
-		"target": "es2016",
-		"module": "commonjs",
+		"target": "ES2023",
+		"module": "nodenext",
+        "moduleResolution": "nodenext",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"strict": true,
 		"skipLibCheck": true,
 		"outDir": "./dist",
-		"rootDir": "."
+		"rootDir": ".",
+		"resolvePackageJsonExports": true,
+        "isolatedModules": true,
+        "declaration": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "incremental": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": false,
+        "noImplicitAny": true,
+        "strictBindCallApply": true,
+        "noFallthroughCasesInSwitch": true,
+        "types": ["vitest/globals", "node"]
 	},
 	"include": ["src/**/*", "src/tests/**/*"]
 }

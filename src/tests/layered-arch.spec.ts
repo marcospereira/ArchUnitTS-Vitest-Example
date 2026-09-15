@@ -19,26 +19,26 @@ describe('architecture', () => {
 
 	it('ui logic should not depend on database logic', async () => {
 		const rule = projectFiles()
-			.inFolder('ui')
+			.inFolder('src/ui')
 			.shouldNot()
 			.dependOnFiles()
-			.inFolder('database');
+			.inFolder('src/database');
 
 		await expect(rule).toPassAsync();
 	});
 
 	it('ui logic should not depend on database logic', async () => {
 		const rule = projectFiles()
-			.inFolder('ui')
+			.inFolder('src/ui')
 			.shouldNot()
 			.dependOnFiles()
-			.inFolder('database');
+			.inFolder('src/database');
 
 		await expect(rule).toPassAsync();
 	});
 
 	it('ui should match pattern', async () => {
-		const rule = projectFiles().inFolder('ui').should().matchPattern('*.ts');
+		const rule = projectFiles().inFolder('ui').should().haveName('*.ts');
 		await expect(rule).toPassAsync();
 	});
 });

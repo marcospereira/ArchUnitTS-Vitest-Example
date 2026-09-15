@@ -5,15 +5,15 @@ describe('Pattern Rules', () => {
 	it('services should have specific patterns', async () => {
 		// Check that service files exist
 		const rule = projectFiles()
-			.inFolder('services')
+			.inFolder('src/services')
 			.should()
-			.matchFilename('*-service.ts');
+			.haveName('*-service.ts');
 
 		await expect(rule).toPassAsync();
 	});
 
 	it('business logic should be cycle free', async () => {
-		const rule = projectFiles().inFolder('business').should().haveNoCycles();
+		const rule = projectFiles().inFolder('src/business').should().haveNoCycles();
 
 		await expect(rule).toPassAsync();
 	});
